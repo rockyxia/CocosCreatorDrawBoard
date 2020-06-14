@@ -103,8 +103,17 @@ export class DrawManager {
     opts.images = [opts.image]
     texture.update(opts)
   }
+  private _drawWithLocationClear() {
+    let data: Uint8Array = null
+    let texture: cc.Texture2D = this._drawSprite.spriteFrame.getTexture()
+    let opts = texture._getOpts()
+    opts.image = data
+    opts.images = [opts.image]
+    texture.update(opts)
+  }
   public clear() {
     this._drawBoard.clear()
+    this._drawWithLocationClear()
   }
 }
 

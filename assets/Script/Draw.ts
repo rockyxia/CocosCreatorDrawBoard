@@ -38,6 +38,7 @@ export default class NewClass extends cc.Component {
 
   onEraser(e, str) {
     if (str === 'clear') {
+      this.drawManager.setStrokeColor(new cc.Color(0, 0, 0, 0))
       this.drawManager.clear()
     } else {
       this.drawManager.setLineWidth(40)
